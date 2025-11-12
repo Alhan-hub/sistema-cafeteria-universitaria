@@ -54,6 +54,9 @@ Este diagrama es más detallado y muestra las clases de tu aplicación Java (tan
 <img width="1608" height="732" alt="image" src="https://github.com/user-attachments/assets/7a7ad0c9-5153-40b5-b0dd-e1e8f9f57afd" />
 
 
+Autor Alhan Rendon
+
+
 
 
 
