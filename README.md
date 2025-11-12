@@ -15,3 +15,43 @@ El sistema integra un backend desarrollado con arquitectura por capas y un front
 Spring Boot Persistencia (Repository y Model) Define las entidades del dominio y su mapeo con la base de datos utilizando JPA/Hibernate. JPA / Hibernate / MySQL Documentación y Control de Versiones Uso de Swagger/OpenAPI para la documentación de la API y GitHub para versionado con ramas y commits descriptivos. Swagger, Git
 
 5. Beneficios del Proyecto Aplicación escalable y modular gracias a la arquitectura por capas. Comunicación eficiente entre cliente y servidor mediante servicios REST. Interfaz de escritorio intuitiva y funcional para los usuarios. Código mantenible, documentado y versionado profesionalmente.
+
+# 📊 1. Diagrama Entidad-Relación
+Este diagrama representa las tablas en tu base de datos (cafeteria_db) y cómo se conectan. Basado en tus entidades JPA (Cliente, Producto, Pedido), la estructura es la siguiente:
+Las entidades centrales son Cliente y Producto. La entidad Pedido actúa como el "hecho" que conecta a un cliente con un producto en un momento dado.
+
+Entidades y Atributos:
+CLIENTE
+1. documento (PK - Clave Primaria)
+2. nombre
+
+PRODUCTO
+
+1. id (PK - Clave Primaria)
+2. nombre
+3. precio
+4. stock
+
+PEDIDO
+
+1. id (PK - Clave Primaria)
+2. cantidad
+3. fechaPedido
+4. estado
+5. cliente_documento (FK - Clave Foránea que apunta a CLIENTE)
+6. producto_id (FK - Clave Foránea que apunta a PRODUCTO)
+
+# Relaciones (Cardinalidad):
+Un Cliente puede tener muchos Pedidos. (Relación 1 a N)
+
+Un Producto puede estar en muchos Pedidos. (Relación 1 a N)
+
+![unnamed](https://github.com/user-attachments/assets/72141bcf-4ccf-4a98-9f35-c58b5951048a)
+
+# Diagrama de Clases (Arquitectónico)
+Este diagrama es más detallado y muestra las clases de tu aplicación Java (tanto del backend como del frontend), sus responsabilidades principales y cómo interactúan.
+
+![unnamed (1)](https://github.com/user-attachments/assets/284535c5-18c4-4d22-8614-fe8bd1db5a5e)
+
+
+
