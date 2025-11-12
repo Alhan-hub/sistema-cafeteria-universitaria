@@ -20,4 +20,8 @@ public class ClienteService {
         return repository.findById(documento)
                 .orElseThrow(() -> new RuntimeException("Cliente no encontrado"));
     }
+
+    public java.util.List<Cliente> listarTodos() {
+        return repository.findAll();
+    }
 }

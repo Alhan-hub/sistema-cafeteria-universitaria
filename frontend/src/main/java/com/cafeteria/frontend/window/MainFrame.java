@@ -6,7 +6,7 @@ import com.cafeteria.frontend.dtos.PedidoDTO;
 import com.cafeteria.frontend.webservicesclient.ClienteApiClient;
 import com.cafeteria.frontend.webservicesclient.PedidoApiClient;
 import com.cafeteria.frontend.webservicesclient.ProductoApiClient;
-import com.cafeteria.frontend.webservicesclient.PedidoRequest; // Import el DTO
+import com.cafeteria.frontend.dtos.PedidoRequest; // Import el DTO
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -47,9 +47,9 @@ public class MainFrame extends JFrame {
         setLayout(new BorderLayout(10, 10));
 
         // Cargar datos (idealmente en un hilo separado, pero simple por ahora)
-        List<ClienteDTO> clienteDTOList = List.of(new ClienteDTO("Richard Rendón", "123"), new ClienteDTO("Diana Ruiz", "456")); //clienteService.getClientes(); <-- Descomentar cuando el backend funcione
+        List<ClienteDTO> clienteDTOList = clienteService.getClientes();
+        //List<ClienteDTO> clienteDTOList = List.of(new ClienteDTO("Richard Rendón", "123"), new ClienteDTO("Diana Ruiz", "456")); // <-- Elimina o comenta esta línea
         List<ProductoDTO> productoDTOList = productoService.getProductos();
-
         // Llenar ComboBox de Clientes
         DefaultComboBoxModel<String> modeloClientes = new DefaultComboBoxModel<>();
         for (ClienteDTO cliente : clienteDTOList) {

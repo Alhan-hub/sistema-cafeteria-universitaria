@@ -17,7 +17,7 @@ public interface ClienteApiClient {
     // Asumamos que el backend tiene un GET /api/clientes/todos
     @GetMapping("/clientes/todos") // Necesitarías crear este endpoint en el backend
     List<ClienteDTO> getClientes();
-
-    @GetMapping("/clientes/{documento}")
+    @GetMapping("/clientes/documento/{documento}")
     ClienteDTO getClientePorDocumento(@PathVariable("documento") String documento);
+
 }

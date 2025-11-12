@@ -19,10 +19,14 @@ public class ClienteController {
     public Cliente registrar(@RequestBody Cliente cliente) {
         return service.registrar(cliente);
     }
-
-    @GetMapping("/{documento}")
-    @Operation(summary = "Busca un cliente por su documento")
+    @GetMapping("/documento/{documento}")
     public Cliente buscar(@PathVariable String documento) {
         return service.buscarPorDocumento(documento);
     }
+    @GetMapping("/todos")
+    @Operation(summary = "Lista todos los clientes registrados")
+    public java.util.List<Cliente> listarTodos() {
+        return service.listarTodos(); // Necesitaremos crear este método en el servicio
+    }
+
 }
