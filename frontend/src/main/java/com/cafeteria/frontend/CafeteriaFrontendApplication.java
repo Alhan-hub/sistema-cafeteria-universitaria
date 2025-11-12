@@ -1,4 +1,4 @@
-ackage com.cafeteria.frontend;
+package com.cafeteria.frontend;
 
 import com.cafeteria.frontend.window.MainFrame;
 import org.springframework.beans.factory.annotation.Autowired;
