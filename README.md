@@ -51,7 +51,7 @@ Un Producto puede estar en muchos Pedidos. (Relación 1 a N)
 # Diagrama de Clases (Arquitectónico)
 Este diagrama es más detallado y muestra las clases de tu aplicación Java (tanto del backend como del frontend), sus responsabilidades principales y cómo interactúan.
 
-![unnamed (1)](https://github.com/user-attachments/assets/284535c5-18c4-4d22-8614-fe8bd1db5a5e)
 
 
+[Diagrama de Clases.drawio](https://github.com/user-attachments/files/23491678/Diagrama.de.Clases.drawio)
 
