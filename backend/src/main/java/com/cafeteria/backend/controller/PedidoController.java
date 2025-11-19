@@ -29,4 +29,8 @@ public class PedidoController {
     public List<Pedido> listar() {
         return service.obtenerPedidos();
     }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable Long id) {
+    service.eliminar(id); // Crea este método en el servicio
+    }
 }

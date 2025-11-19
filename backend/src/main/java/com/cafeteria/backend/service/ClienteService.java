@@ -24,4 +24,9 @@ public class ClienteService {
     public java.util.List<Cliente> listarTodos() {
         return repository.findAll();
     }
+
+    public void eliminar(String documento) {
+
+        repository.deleteById(documento);
+    }
 }

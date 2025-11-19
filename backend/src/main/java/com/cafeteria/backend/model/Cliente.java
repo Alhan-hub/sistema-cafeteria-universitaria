@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data // Lombok: genera getters, setters, etc.
+@Data
 @NoArgsConstructor
 public class Cliente {
     @Id

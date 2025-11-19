@@ -26,4 +26,8 @@ public class ProductoController {
     public Producto registrarProducto(@RequestBody Producto producto) {
         return service.registrarProducto(producto);
     }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable Integer id) {
+        service.eliminar(id); // Crea este método en el servicio
+    }
 }

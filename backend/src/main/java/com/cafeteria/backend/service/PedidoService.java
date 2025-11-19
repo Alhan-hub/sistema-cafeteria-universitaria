@@ -37,4 +37,8 @@ public class PedidoService {
     public List<Pedido> obtenerPedidos() {
         return repository.findAll();
     }
+
+    public void eliminar(Long id) {
+        repository.deleteById(id);
+    }
 }

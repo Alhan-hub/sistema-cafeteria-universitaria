@@ -24,4 +24,7 @@ public class ProductoService {
     public Producto registrarProducto(Producto producto) {
         return repository.save(producto);
     }
+    public void eliminar(Integer id) {
+        repository.deleteById(id);
+    }
 }
